@@ -47,10 +47,6 @@ I did attach the `requirements.txt` for repeatability.
 Origin of the lh.sphere[^1] file: CorticalParcellation_Yeo2011 - Free Surfer Wiki [^2]
 Then `Yeo_JNeurophysiol11_FreeSurfer\fsaverage\surf\lh.sphere`
 
-# Sources
-[^1]: ftp://surfer.nmr.mgh.harvard.edu/pub/data/Yeo_JNeurophysiol11_FreeSurfer.zip
-[^2]: https://surfer.nmr.mgh.harvard.edu/fswiki/CorticalParcellation_Yeo2011
-
 # Example code
 
 ## Run the demo
@@ -90,3 +86,5 @@ python shere2dice.py --scalar_files lh.thickness --input_dirs sub-001 sub-002 --
 python shere2dice.py --scalar_files lh.thickness --input_dirs sub-001 sub-002 --output_dirs None
 ```
 
+[^1]: ftp://surfer.nmr.mgh.harvard.edu/pub/data/Yeo_JNeurophysiol11_FreeSurfer.zip
+[^2]: https://surfer.nmr.mgh.harvard.edu/fswiki/CorticalParcellation_Yeo2011
