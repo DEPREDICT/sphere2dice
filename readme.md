@@ -1,11 +1,31 @@
+# What does this code do?
+
+It converts FreeSurfer Morphometry data like `lh.thickness` of `lh-thickness.gii` into a stack of 2D images and saves is as numpy array.
+
+This stack of images is easier to use as input to conventional CNNs, while avoiding projection issues other methods suffer from.
+
 # How to use?
+
 Run `python sphere2dice.py -h` for help on the inputs.
-To get started processing your own data you only have to provide the `--scalar_file` parameter.
-`python sphere2dice.py --scalar_files sub-01_Thickness.gii sub-02_Thickness.gii`
+To get started processing one single file of your own you only have to provide the `--scalar_file` parameter.
+`python sphere2dice.py --scalar_files sub-01_Thickness.gii `
+
+This of course also works in series:
+
+`python sphere2dice.py --scalar_files sub-01_Thickness.gii sub-02_Thickness.gii` 
+
+Alternatively, it is also possible to iterate over directories:
+
+`python sphere2dice.py --scalar_files lh.thickness --input_dirs sub-001/Surf sub-002/Surf-sub-003/Surf output_dirs sub-001 sub-002 sub-003`
+
+If we want to store our results in the same folder as we read them from, we can set `output_dirs` to `None`:
+
+`python sphere2dice.py --scalar_files lh.thickness --input_dirs sub-001/Surf sub-002/Surf-sub-003/Surf output_dirs None`
 
 # How sphere2dice works
-I use fsaverage sphere coordinates (provided in separate file as `lh.sphere`).
-Their index is linked to the index of scalar values (like thickness or curvature).
+It uses fsaverage sphere coordinates (provided in separate file as `lh.sphere`) for fsaverage registered Gifty (.gii) files. Alternatively, for FreeSurfer Morphometry data, it is assumed that the scalar file read is accompanied by a corresponding `?h.sphere` file.
+
+The index of these sphere coordinates is linked to the index of scalar values (like thickness or curvature).
 These coordinates are projected to a 2D plane, and we cut a square out of the center of size `size patch_size`.
 Then we interpolate these points to a given `resolution`. 
 We create multiple patches from all different sides but rotating the coordinates and repeating the process.
