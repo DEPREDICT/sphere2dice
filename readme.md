@@ -5,6 +5,7 @@ It converts Cortical Brain Morphometry data from FreeSurfer (`lh.thickness`) or 
 # How to use?
 
 Run `python sphere2dice.py -h` for help on the inputs.
+
 To get started processing one single file of your own you only have to provide the `--scalar_file` parameter.
 `python sphere2dice.py --scalar_files sub-01_Thickness.gii `
 
