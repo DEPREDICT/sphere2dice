@@ -3,9 +3,7 @@
 It converts FreeSurfer Morphometry data like `lh.thickness` of `lh-thickness.gii` into a stack of 2D images and saves is as numpy array.
 
 This stack of images is easier to use as input to conventional CNNs, while avoiding projection issues other methods suffer from.
-
 ![repository-open-graph-template](https://user-images.githubusercontent.com/38399483/158713220-cde45111-8d71-4e09-8c55-6516e6749ba8.png)
-
 # How to use?
 
 Run `python sphere2dice.py -h` for help on the inputs.
