@@ -43,10 +43,6 @@ I did attach the `requirements.txt` for repeatability.
 * *Dice*: I use the word dice every so often (like in the name of the code) for folding a simple box, which is the most simple way to perceive this method (but it is not limited to it)
 * *Stack*: A stack is a 3D volume of 2D patches. 
 
-# Origin of accompanying files
-Origin of the lh.sphere[^1] file: CorticalParcellation_Yeo2011 - Free Surfer Wiki [^2]
-Then `Yeo_JNeurophysiol11_FreeSurfer\fsaverage\surf\lh.sphere`
-
 # Example code
 
 ## Run the demo
@@ -85,6 +81,10 @@ python shere2dice.py --scalar_files lh.thickness --input_dirs sub-001 sub-002 --
 ```
 python shere2dice.py --scalar_files lh.thickness --input_dirs sub-001 sub-002 --output_dirs None
 ```
+
+# Origin of accompanying files
+Origin of the lh.sphere[^1] file: CorticalParcellation_Yeo2011 - Free Surfer Wiki [^2]
+Then `Yeo_JNeurophysiol11_FreeSurfer\fsaverage\surf\lh.sphere`
 
 [^1]: ftp://surfer.nmr.mgh.harvard.edu/pub/data/Yeo_JNeurophysiol11_FreeSurfer.zip
 [^2]: https://surfer.nmr.mgh.harvard.edu/fswiki/CorticalParcellation_Yeo2011
