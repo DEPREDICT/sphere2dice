@@ -1,7 +1,7 @@
 # What does this code do?
 
 It converts Cortical Brain Morphometry data from FreeSurfer (`lh.thickness`) or Gifty (`lh-thickness.gii`) type into a stack of 2D images and saves is as numpy array. This stack of images is easier to use as input to conventional CNNs, while avoiding projection issues other methods suffer from.
-![repository-open-graph-template](https://user-images.githubusercontent.com/38399483/158713220-cde45111-8d71-4e09-8c55-6516e6749ba8.png)
+![repository-open-graph-template](https://repository-images.githubusercontent.com/470790662/bf0673b3-6eba-4119-b7ec-1559a6a40172)
 # How to use?
 
 Run `python sphere2dice.py -h` for help on the inputs.
