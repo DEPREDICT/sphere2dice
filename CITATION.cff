@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+authors:
+  - family-names: Poirot
+    given-names: Maarten G.
+    orcid: https://orcid.org/0000-0003-1937-7978
+title: "Sphere2Dice: Brain Morphology Projector"
+version: 0.0.1
+year: 2022,
+url: "https://github.com/DEPREDICT/sphere2dice"
+date-released: 2022-03-01
