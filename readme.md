@@ -1,12 +1,11 @@
 # What does this code do?
 
-It converts FreeSurfer Morphometry data like `lh.thickness` of `lh-thickness.gii` into a stack of 2D images and saves is as numpy array.
-
-This stack of images is easier to use as input to conventional CNNs, while avoiding projection issues other methods suffer from.
-
+It converts Cortical Brain Morphometry data from FreeSurfer (`lh.thickness`) or Gifty (`lh-thickness.gii`) type into a stack of 2D images and saves is as numpy array. This stack of images is easier to use as input to conventional CNNs, while avoiding projection issues other methods suffer from.
+![repository-open-graph-template](https://repository-images.githubusercontent.com/470790662/bf0673b3-6eba-4119-b7ec-1559a6a40172)
 # How to use?
 
 Run `python sphere2dice.py -h` for help on the inputs.
+
 To get started processing one single file of your own you only have to provide the `--scalar_file` parameter.
 `python sphere2dice.py --scalar_files sub-01_Thickness.gii `
 
@@ -43,14 +42,6 @@ I did attach the `requirements.txt` for repeatability.
   The code contains debugging modes that show this process (but might be a bit finicky to set up, so I’ll supply these as soon as I’m back at my machine.
 * *Dice*: I use the word dice every so often (like in the name of the code) for folding a simple box, which is the most simple way to perceive this method (but it is not limited to it)
 * *Stack*: A stack is a 3D volume of 2D patches. 
-
-# Origin of accompanying files
-Origin of the lh.sphere[^1] file: CorticalParcellation_Yeo2011 - Free Surfer Wiki [^2]
-Then `Yeo_JNeurophysiol11_FreeSurfer\fsaverage\surf\lh.sphere`
-
-# Sources
-[^1]: ftp://surfer.nmr.mgh.harvard.edu/pub/data/Yeo_JNeurophysiol11_FreeSurfer.zip
-[^2]: https://surfer.nmr.mgh.harvard.edu/fswiki/CorticalParcellation_Yeo2011
 
 # Example code
 
@@ -91,3 +82,9 @@ python shere2dice.py --scalar_files lh.thickness --input_dirs sub-001 sub-002 --
 python shere2dice.py --scalar_files lh.thickness --input_dirs sub-001 sub-002 --output_dirs None
 ```
 
+# Origin of accompanying files
+Origin of the lh.sphere[^1] file: CorticalParcellation_Yeo2011 - Free Surfer Wiki [^2]
+Then `Yeo_JNeurophysiol11_FreeSurfer\fsaverage\surf\lh.sphere`
+
+[^1]: ftp://surfer.nmr.mgh.harvard.edu/pub/data/Yeo_JNeurophysiol11_FreeSurfer.zip
+[^2]: https://surfer.nmr.mgh.harvard.edu/fswiki/CorticalParcellation_Yeo2011
