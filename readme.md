@@ -1,6 +1,6 @@
 # Sphere2Dice Readme
 
-It converts Cortical Brain Morphometry data from FreeSurfer (`lh.thickness`) or Gifty (`lh-thickness.gii`) type into a stack of 2D images and saves is as numpy array. This stack of images is easier to use as input to conventional CNNs, while avoiding projection issues other methods suffer from.
+Sphere2Dice converts Cortical Brain Morphometry data from FreeSurfer (`lh.thickness`) or Gifty (`lh-thickness.gii`) type into a stack of 2D images and saves is as numpy array. This stack of images is easier to use as input to conventional CNNs, while avoiding projection issues other methods suffer from.
 ![repository-open-graph-template](https://repository-images.githubusercontent.com/470790662/bf0673b3-6eba-4119-b7ec-1559a6a40172)
 # How to use?
 
